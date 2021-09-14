@@ -1,6 +1,6 @@
 rubocop:
   config_file: .rubocop.yml
-  version: 0.72.0
+  version: 1.5.2
 coffeescript:
   config_file: coffeescript.json
 scss:
