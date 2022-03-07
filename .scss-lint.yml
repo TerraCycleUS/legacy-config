@@ -8,8 +8,6 @@ linters:
     enabled: false
   PlaceholderInExtend:
     enabled: false
-  StringQuotes:
-    enabled: true
   PropertySortOrder:
     enabled: true
     separate_groups: true
