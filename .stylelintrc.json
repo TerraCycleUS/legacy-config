@@ -1,10 +1,38 @@
 {
-  "extends": "stylelint-config-rational-order",
+  "extends": [
+    "stylelint-scss",
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended",
+    "stylelint-config-rational-order"
+  ],
   "plugins": [
     "stylelint-scss",
-    "stylelint-order"
+    "stylelint-prettier",
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
   ],
   "rules": {
+    "prettier/prettier": true,
+    "at-rule-empty-line-before": ["always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"],
+      "ignoreAtRules": ["else"]
+    }],
+    "color-function-notation": "legacy",
+    "annotation-no-unknown": [true, {
+      "ignoreAnnotations": ["default"]
+    }],
+    "declaration-empty-line-before": ["always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"]
+    }],
+    "function-no-unknown": null,
     "order/properties-order": [],
     "plugin/rational-order": [
       true,
@@ -13,28 +41,16 @@
         "empty-line-between-groups": true
       }
     ],
-    "string-quotes": "single",
-    "at-rule-empty-line-before": ["always",
-      {
-        "except": [
-          "blockless-after-same-name-blockless",
-          "first-nested"
-        ]
-      }
-    ],
-    "block-closing-brace-empty-line-before": "always-multi-line",
-    "number-leading-zero": "always",
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true,
-    "unit-whitelist": [
-      "em",
-      "rem",
-      "px",
-      "%",
-      "vw",
-      "vh",
-      "s",
-      "deg"
-    ]
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+    }],
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/at-mixin-pattern": null,
+    "scss/load-no-partial-leading-underscore": null,
+    "scss/no-global-function-names": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/percent-placeholder-pattern": null,
+    "no-descending-specificity": null
   }
 }
