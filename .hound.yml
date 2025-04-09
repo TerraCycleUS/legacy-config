@@ -15,4 +15,3 @@ stylelint:
   config_file: .stylelintrc.json
   version: 13.2.1
   enabled: true
-
