@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "eslint-plugin-prettier"
+  ],
+  "semi": false,
+  "singleQuote": true
+}
